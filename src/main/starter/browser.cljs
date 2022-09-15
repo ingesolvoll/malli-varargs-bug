@@ -6,8 +6,10 @@
 (defn ^:dev/after-load start []
       (md/start!)
       (js/console.log "start")
-      (js/setTimeout #(sf/my-function 1)
-                     500))
+      (js/setTimeout #(sf/my-function-good 1)
+                     500)
+      (js/setTimeout #(sf/my-function-bad 1)
+                     1000))
 
 (defn init []
       ;; init is called ONCE when the page loads
